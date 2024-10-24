@@ -10,7 +10,6 @@ Cara Kerja:
 
 */
 
-
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -18,23 +17,19 @@ const double pi = 3.1416;
 
 // Fungsi jarak
 double jarak(double x1, double y1, double x2, double y2) {
-    return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
-}
+    return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2)); }
 
 // Fungsi jari-jari
 double jari(double x1, double y1, double x2, double y2) {
-    return jarak(x1, y1, x2, y2);
-}
+    return jarak(x1, y1, x2, y2); }
 
 // Fungsi keliling
 double keliling(double jari) {
-    return 2 * pi * jari;
-}
+    return 2 * pi * jari; }
 
 // Fungsi luas
 double luas(double jari) {
-    return pi * jari * jari;
-}
+    return pi * jari * jari; }
 
 // Fungsi utama
 int main() {
@@ -55,5 +50,4 @@ int main() {
     cout << "Keliling: " << keliling(j) << "\n";
     cout << "Luas: " << luas(j) << "\n";
 
-    return 0;
-}
+    return 0; }
