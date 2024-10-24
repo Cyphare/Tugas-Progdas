@@ -1,5 +1,6 @@
 /*
 Arnold Gavrael - 539797 - Kelas B
+
 Cara Kerja:
 1. Pengguna akan memasukkan koordinat titik pusat (x1 dan x2) serta titik ujung lingkaran (x2 y2).
 2. Program akan menghitung jarak antara dua titik tersebut dan mendefinisikannya sebagai jari-jari lingkaran.
@@ -10,8 +11,8 @@ Cara Kerja:
 
 #include <iostream>
 #include <cmath>
-
 using namespace std;
+const double pi = 3.1416;
 
 // Fungsi jarak
 double jarak(double x1, double y1, double x2, double y2) {
@@ -25,13 +26,11 @@ double jari(double x1, double y1, double x2, double y2) {
 
 // Fungsi keliling
 double keliling(double jari) {
-    const double pi = 3.1416;
     return 2 * pi * jari;
 }
 
 // Fungsi luas
 double luas(double jari) {
-    const double pi = 3.1416;
     return pi * jari * jari;
 }
 
