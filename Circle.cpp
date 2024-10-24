@@ -1,47 +1,59 @@
+/*
+Arnold Gavrael - 539797 - Kelas B
+
+Cara Kerja:
+1. Pengguna akan memasukkan koordinat titik pusat (x1 dan x2) serta titik ujung lingkaran (x2 y2).
+2. Program akan menghitung jarak antara dua titik tersebut dan mendefinisikannya sebagai jari-jari lingkaran.
+3. Program akan menghitung diameter, keliling, dan luas lingkaran menggunakan jari-jari tersebut.
+4. Program akan menampilkan semua data yang telah dihitung di terminal.
+*/
+
+
 #include <iostream>
 #include <cmath>
 
 using namespace std;
 
-// Function to calculate the distance between two points (x1, y1) and (x2, y2)
-double distance(double x1, double y1, double x2, double y2) {
+// Fungsi jarak
+double jarak(double x1, double y1, double x2, double y2) {
     return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
 }
 
-// Function to calculate the radius of the circle
-double rad(double x1, double y1, double x2, double y2) {
-    return distance(x1, y1, x2, y2);
+// Fungsi jari-jari
+double jari(double x1, double y1, double x2, double y2) {
+    return jarak(x1, y1, x2, y2);
 }
 
-// Function to calculate the circumference of the circle
-double circum(double rad) {
+// Fungsi keliling
+double keliling(double jari) {
     const double pi = 3.1416;
-    return 2 * pi * rad;
+    return 2 * pi * jari;
 }
 
-// Function to calculate the area of the circle
-double area(double rad) {
+// Fungsi luas
+double luas(double jari) {
     const double pi = 3.1416;
-    return pi * rad * rad;
+    return pi * jari * jari;
 }
 
+// Fungsi utama
 int main() {
     double x1, y1, x2, y2;
 
-    // Input: the center and a point on the circle
-    cout << "Enter the coordinates of the center of the circle (x1, y1): ";
+    // Input dari pengguna
+    cout << "Masukkan koordinat titik pusat lingkaran (x1 y1): ";
     cin >> x1 >> y1;
-    cout << "Enter the coordinates of a point on the circle (x2, y2): ";
+    cout << "Masukkan koordinat titik ujung lingkaran (x2 y2): ";
     cin >> x2 >> y2;
     
-    // Calculate radius
-    double r = rad(x1, y1, x2, y2);
+    // Mendefinisikan jari-jari
+    double j = jari(x1, y1, x2, y2);
 
-    // Output results
-    cout << "Radius: " << r << endl;
-    cout << "Diameter: " << 2 * r << endl;
-    cout << "Circumference: " << circum(r) << endl;
-    cout << "Area: " << area(r) << endl;
+    // Hasil
+    cout << "Jari-jari: " << j << "\n";
+    cout << "Diameter: " << 2 * j << "\n";
+    cout << "Keliling: " << keliling(j) << "\n";
+    cout << "Luas: " << luas(j) << "\n";
 
     return 0;
 }
