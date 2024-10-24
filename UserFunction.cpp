@@ -20,8 +20,8 @@ double jarak(double x1, double y1, double x2, double y2) {
     return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2)); }
 
 // Fungsi jari-jari
-double jari(double jarak) {
-    return jarak; }
+double jari(double x1, double y1, double x2, double y2) {
+    return jarak(x1, y1, x2, y2); }
 
 // Fungsi keliling
 double keliling(double jari) {
