@@ -1,6 +1,5 @@
 /*
 Arnold Gavrael - 539797 - Kelas B
-
 Cara Kerja:
 1. Pengguna akan memasukkan koordinat titik pusat (x1 dan x2) serta titik ujung lingkaran (x2 y2).
 2. Program akan menghitung jarak antara dua titik tersebut dan mendefinisikannya sebagai jari-jari lingkaran.
