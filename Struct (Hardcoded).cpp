@@ -12,26 +12,26 @@ struct studentType {
 };
 
 // Function prototypes
-void readStudentData(studentType students[], int size);
-void assignGrades(studentType students[], int size);
-int findHighestScore(studentType students[], int size);
-void printHighestScorers(studentType students[], int size, int highestScore);
-void printAllStudents(studentType students[], int size);  // New function prototype
+void readStudentData(studentType students[], int size); // Function to input student data and their number grades
+void assignGrades(studentType students[], int size); // Function to assign alphabetical grades based on number grades
+int findHighestScore(studentType students[], int size); // Function to find the highest score from all the student's grades
+void printHighestScorers(studentType students[], int size, int highestScore); // Function to print the highest scoring student's name and their grades
+void printAllStudents(studentType students[], int size); // Function to print all the students name and grades
 
 int main() {
     studentType students[20];  // Array for 20 students
 
-    // Hardcoded student data
-    readStudentData(students, 20);  // Use 20 for hardcoded entries
+    // Function calls
+    readStudentData(students, 20);
     assignGrades(students, 20);
-    printAllStudents(students, 20);  // Call to print all students' scores
+    printAllStudents(students, 20);
     int highestScore = findHighestScore(students, 20);
     printHighestScorers(students, 20, highestScore);
 
     return 0;
 }
 
-// Function to read students' data (now hardcoded)
+// Function to read students' data
 void readStudentData(studentType students[], int size) {
     // Hardcoded data for 20 students
     students[0] = {"John", "Doe", 85};
