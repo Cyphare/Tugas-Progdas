@@ -86,15 +86,15 @@ int main() {
 
 /*
 
-Formal parameter adalah variabel yang dideklarasikan dalam definisi fungsi.
+1. Formal parameter adalah variabel yang dideklarasikan dalam definisi fungsi.
     Line 34 | double keliling(double jari)
         Fungsi "keliling" mempunyai formal parameter "jari" dengan tipe "double".
 
-Actual parameter adalah nilai-nilai yang diberikan saat kita memanggil fungsi.
+2. Actual parameter adalah nilai-nilai yang diberikan saat kita memanggil fungsi.
     Line 55 | double j2 = jari(x1, y1, x2, y2)
         Actual parameter "x1, y1, x2, y2" akan diberikan saat memanggil fungsi "jari".
 
-Function signature adalah nama fungsi, tipe pengembalian, dan daftar parameter yang diperlukan oleh fungsi tersebut.
+3. Function signature adalah nama fungsi, tipe pengembalian, dan daftar parameter yang diperlukan oleh fungsi tersebut.
     Line 38 | double luas(double jari)
         Function signaturenya mengandung nama (luas). tipe pengembalian (double), dan parameter (double jari).
 
