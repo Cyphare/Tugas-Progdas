@@ -55,10 +55,10 @@ int main() {
     double j2 = jari(x1, y1, x2, y2);
 
     // Hasil
-    cout << "\nJari-jari: " << j2 << "\n";
-    cout << "Diameter: " << 2 * j2 << "\n";
-    cout << "Keliling: " << keliling(j2) << "\n";
-    cout << "Luas: " << luas(j2) << "\n";
+    cout << "\nJari-jari: " << j2 << '\n';
+    cout << "Diameter: " << 2 * j2 << '\n';
+    cout << "Keliling: " << keliling(j2) << '\n';
+    cout << "Luas: " << luas(j2) << '\n';
 
     // Input titik ketiga (opsional)
     cout << "\nMasukkan titik ketiga? (y/n): ";
