@@ -88,7 +88,7 @@ void assignGrades(studentType students[], int size) {
 
 // New function to print all students' scores
 void printAllStudents(studentType students[], int size) {
-    cout << "\n\nAll Students' Scores:\n\n";
+    cout << "\nAll Students' Scores:\n\n";
     cout << left << setw(15) << "Last Name" << setw(15) << "First Name" << setw(10) << "Score" << "Grade\n";
     cout << "---------------------------------------------\n";
     for (int i = 0; i < size; i++) {
