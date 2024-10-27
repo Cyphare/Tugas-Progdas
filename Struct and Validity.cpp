@@ -34,15 +34,15 @@ void readStudentData(studentType students[], int size);
 void assignGrades(studentType students[], int size);
 int findHighestScore(studentType students[], int size);
 void printHighestScorers(studentType students[], int size, int highestScore);
+void printAllStudents(studentType students[], int size);  // New function prototype
 
-// Main Function
 int main() {
-    
     studentType students[20];  // Array for 20 students
 
     // Function calls
     readStudentData(students, 20);
     assignGrades(students, 20);
+    printAllStudents(students, 20);  // Call to print all students' scores
     int highestScore = findHighestScore(students, 20);
     printHighestScorers(students, 20, highestScore);
 
@@ -68,6 +68,19 @@ void assignGrades(studentType students[], int size) {
     }
 }
 
+// New function to print all students' scores
+void printAllStudents(studentType students[], int size) {
+    cout << "\nAll Students' Scores:\n";
+    cout << left << setw(15) << "Last Name" << setw(15) << "First Name" << setw(10) << "Score" << "Grade\n";
+    cout << "---------------------------------------------\n";
+    for (int i = 0; i < size; i++) {
+        cout << left << setw(15) << (students[i].studentLName + ",")  // Add comma after last name
+             << setw(15) << students[i].studentFName 
+             << setw(10) << students[i].testScore 
+             << students[i].grade << endl;
+    }
+}
+
 // Function to find the highest score
 int findHighestScore(studentType students[], int size) {
     int highest = students[0].testScore;
@@ -81,15 +94,16 @@ int findHighestScore(studentType students[], int size) {
 
 // Function to print names of students with the highest score
 void printHighestScorers(studentType students[], int size, int highestScore) {
-    cout << "Students with the highest score (" << highestScore << "):" << endl;
+    cout << "\nStudents with the highest score:\n";
     for (int i = 0; i < size; i++) {
         if (students[i].testScore == highestScore) {
-            cout << left << setw(10) << students[i].studentLName << ", " 
+            cout << students[i].studentLName << ", "
                  << students[i].studentFName << " - " 
                  << students[i].testScore << " (" << students[i].grade << ")" << endl;
         }
     }
 }
+
 
 /*
 
