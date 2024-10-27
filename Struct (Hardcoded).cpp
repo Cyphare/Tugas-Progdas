@@ -1,3 +1,22 @@
+/*
+
+Arnold Gavrael - 539797 - Kelas B
+
+How it works:
+1. Program reads student data (first name, last name, test score) from input.
+2. Program assigns a grade based on the student's score:
+    'A' for 90 and above,
+    'B' for 80-89,
+    'C' for 70-79,
+    'D' for 60-69,
+    'F' for below 60.
+
+3. Program finds the highest score among all students.
+4. Program prints all of the students' name and score.
+4. Program prints the names of the students who have the highest score.
+
+*/
+
 #include <iostream>
 #include <iomanip>
 #include <string>
