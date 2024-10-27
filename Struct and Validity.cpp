@@ -35,7 +35,9 @@ void assignGrades(studentType students[], int size);
 int findHighestScore(studentType students[], int size);
 void printHighestScorers(studentType students[], int size, int highestScore);
 
+// Main Function
 int main() {
+    
     studentType students[20];  // Array for 20 students
 
     // Function calls
