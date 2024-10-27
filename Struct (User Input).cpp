@@ -78,7 +78,7 @@ void printAllStudents(studentType students[], int size) {
         cout << left << setw(15) << (students[i].studentLName + ",")  // Add comma after last name
              << setw(15) << students[i].studentFName 
              << setw(10) << students[i].testScore 
-             << students[i].grade << endl;
+             << students[i].grade << '\n';
     }
 }
 
@@ -100,7 +100,7 @@ void printHighestScorers(studentType students[], int size, int highestScore) {
         if (students[i].testScore == highestScore) {
             cout << students[i].studentLName << ", "
                  << students[i].studentFName << " - " 
-                 << students[i].testScore << " (" << students[i].grade << ")" << endl;
+                 << students[i].testScore << " (" << students[i].grade << ")" << '\n';
         }
     }
 }
