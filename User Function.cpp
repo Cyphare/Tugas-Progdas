@@ -1,6 +1,4 @@
-/*
-
-Arnold Gavrael - 539797 - Kelas B
+// Arnold Gavrael - 539797 - Kelas B
 
 Cara Kerja:
 1. Pengguna akan memasukkan koordinat titik pusat (x1 dan y2) serta titik ujung lingkaran (x2 y2).
