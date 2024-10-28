@@ -1,5 +1,4 @@
 // Arnold Gavrael - 539797 - Kelas B
-
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -26,9 +25,7 @@ double area(double radius) {
     return pi * radius * radius; }
 
 
-// Fungsi utama
 int main() {
-
     // Deklarasi variabel
     double x1, y1, x2, y2, x3, y3;
     char pilihan;
