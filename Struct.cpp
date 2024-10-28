@@ -1,9 +1,9 @@
 // Arnold Gavrael - 539797 - Kelas B
-
 #include <iostream>
 #include <iomanip>
 #include <string>
 using namespace std;
+
 
 // Mendefinisikan struct
 struct studentType {
@@ -13,6 +13,7 @@ struct studentType {
     char grade;
 };
 
+
 // Prototip fungsi
 void readData(studentType students[], int size); 
 void assignGrade(studentType students[], int size); 
@@ -20,8 +21,8 @@ int findHighest(studentType students[], int size);
 void printAll(studentType students[], int size); 
 void printHighest(studentType students[], int size, int highestScore); 
 
-int main() {
 
+int main() {
     // Set array buat 20 siswa
     studentType students[20];  
 
@@ -35,6 +36,7 @@ int main() {
     return 0;
 }
 
+
 // Fungsi untuk menginput data siswa
 void readData(studentType students[], int size) {
     for (int i = 0; i < size; i++) {
@@ -43,6 +45,7 @@ void readData(studentType students[], int size) {
         // Kamu menginput data seperti berikut: Nama depan, nama belakang, skor
     }
 }
+
 
 // Fungsi untuk memberikan nilai huruf berdasarkan nilai angka
 void assignGrade(studentType students[], int size) {
@@ -55,6 +58,7 @@ void assignGrade(studentType students[], int size) {
         else {students[i].grade = 'F';} // 0-49 dapat F
     }
 }
+
 
 // Fungsi untuk menemukan skor terbesar dari semua siswa (bubble sort)
 int findHighest(studentType students[], int size) {
@@ -70,6 +74,7 @@ int findHighest(studentType students[], int size) {
     // Di akhir, akan ditemukan nilai tertinggi dari semua siswa
 }
 
+
 // Fungsi untuk menampilkan data siswa dan nilai dalam bentuk tabel
 void printAll(studentType students[], int size) {
     cout << "\nAll Students' Scores:\n\n";
@@ -82,6 +87,7 @@ void printAll(studentType students[], int size) {
         // "setw" akan mengatur panjang spasi dari awal kata sehingga kata selanjutnya akan justified
     }
 }
+
 
 // Fungsi untuk menampilkan siswa dengan nilai tertinggi dan nilainya sendiri
 void printHighest(studentType students[], int size, int highestScore) {
