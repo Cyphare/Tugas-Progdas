@@ -1,20 +1,5 @@
 // Arnold Gavrael - 539797 - Kelas B
 
-Cara Kerja:
-1. Pengguna akan memasukkan koordinat titik pusat (x1 dan y2) serta titik ujung lingkaran (x2 y2).
-2. Program akan menghitung jarak antara dua titik tersebut dan mendefinisikannya sebagai jari-jari lingkaran.
-3. Program akan menghitung diameter, keliling, dan luas lingkaran menggunakan jari-jari tersebut.
-4. Program akan menampilkan semua data yang telah dihitung di terminal.
-
-Opsional:
-1. Pengguna akan memasukkan koordinat titk ketiga (x3 dan y3).
-2. Program akan membandingkan jarak antara titik pertama dan kedua (j2) dan jarak anatara titik pertama dan ketiga (j3).
-3. Jika j3 kurang dari j2, titik ada di dalam lingkaran.
-4. Jika j3 sama dengan dari j2, titik ada di ujung lingkaran.
-5. Jika j3 lebih dari j2, titik ada di luar lingkaran.
-
-*/
-
 #include <iostream>
 #include <cmath>
 using namespace std;
