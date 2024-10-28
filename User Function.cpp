@@ -5,9 +5,11 @@ using namespace std;
 const double pi = 3.1416; // Set pi agar konstan
 
 
+
 // Fungsi jarak
 double distance(double x1, double y1, double x2, double y2) {
     return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2)); }
+
 
 
 // Fungsi jari-jari
@@ -15,14 +17,17 @@ double radius(double x1, double y1, double x2, double y2) {
     return distance(x1, y1, x2, y2); }
 
 
+
 // Fungsi keliling
 double circumference(double radius) { 
     return 2 * pi * radius; }
 
 
+
 // Fungsi luas
 double area(double radius) { 
     return pi * radius * radius; }
+
 
 
 int main() {
