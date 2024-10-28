@@ -23,20 +23,20 @@ using namespace std;
 const double pi = 3.1416;
 
 // Fungsi jarak
-double jarak(double x1, double y1, double x2, double y2) {
+double distance(double x1, double y1, double x2, double y2) {
     return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2)); }
 
 // Fungsi jari-jari
-double jari(double x1, double y1, double x2, double y2) {
-    return jarak(x1, y1, x2, y2); }
+double radius(double x1, double y1, double x2, double y2) {
+    return distance(x1, y1, x2, y2); }
 
 // Fungsi keliling
-double keliling(double jari) { 
-    return 2 * pi * jari; }
+double circumference(double radius) { 
+    return 2 * pi * radius; }
 
 // Fungsi luas
-double luas(double jari) { 
-    return pi * jari * jari; }
+double area(double radius) { 
+    return pi * radius * radius; }
 
 // Fungsi utama
 int main() {
@@ -52,13 +52,13 @@ int main() {
     cin >> x2 >> y2;
 
     // Mendefinisikan jari-jari
-    double j2 = jari(x1, y1, x2, y2);
+    double r2 = radius(x1, y1, x2, y2);
 
     // Hasil
-    cout << "\nJari-jari: " << j2 << '\n';
-    cout << "Diameter: " << 2 * j2 << '\n';
-    cout << "Keliling: " << keliling(j2) << '\n';
-    cout << "Luas: " << luas(j2) << '\n';
+    cout << "\nJari-jari: " << r2 << '\n';
+    cout << "Diameter: " << 2 * r2 << '\n';
+    cout << "Keliling: " << circumference(r2) << '\n';
+    cout << "Luas: " << area(r2) << '\n';
 
     // Input titik ketiga (opsional)
     cout << "\nMasukkan titik ketiga? (y/n): ";
@@ -70,11 +70,11 @@ int main() {
         cin >> x3 >> y3;
 
         // Mendefinisikan jarak anatar titik pusat dengan titik ketiga
-        double j3 = jari(x1, y1, x3, y3);
+        double r3 = radius(x1, y1, x3, y3);
 
         // Cek apakah titik ada di dalam lingkaran
-        if (j3 < j2) { cout << "Titik berada di dalam lingkaran.\n"; } 
-        else if (j3 == j2) { cout << "Titik berada di ujung lingkaran.\n"; }
+        if (r3 < r2) { cout << "Titik berada di dalam lingkaran.\n"; } 
+        else if (r3 == r2) { cout << "Titik berada di ujung lingkaran.\n"; }
         else { cout << "Titik berada di luar lingkaran.\n"; }
 
         // Tanyakan lagi apakah ingin memasukkan titik ketiga
@@ -83,19 +83,3 @@ int main() {
     }
     return 0;
 }
-
-/*
-
-1. Formal parameter adalah variabel yang dideklarasikan dalam definisi fungsi.
-    Line 34 | double keliling(double jari)
-        Fungsi "keliling" mempunyai formal parameter "jari" dengan tipe "double".
-
-2. Actual parameter adalah nilai-nilai yang diberikan saat kita memanggil fungsi.
-    Line 55 | double j2 = jari(x1, y1, x2, y2)
-        Actual parameter "x1, y1, x2, y2" akan diberikan saat memanggil fungsi "jari".
-
-3. Function signature adalah nama fungsi, tipe pengembalian, dan daftar parameter yang diperlukan oleh fungsi tersebut.
-    Line 38 | double luas(double jari)
-        Function signaturenya mengandung nama (luas). tipe pengembalian (double), dan parameter (double jari).
-
-*/
