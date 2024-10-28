@@ -26,11 +26,11 @@ int main() {
     studentType students[20];  
 
     // Call fungsi
-    readData(students, 20);
-    assignGrade(students, 20);
-    int highestScore = findHighest(students, 20);
-    printAll(students, 20);
-    printHighest(students, 20, highestScore);
+    readData(students, 20); // Input data
+    assignGrade(students, 20); // Beri nilai huruf
+    int highestScore = findHighest(students, 20); // Temuin nilai tertinggi
+    printAll(students, 20); // Tampilkan data semua siswa
+    printHighest(students, 20, highestScore); // Tampilkan data siswa dengan nilai tertinggi
 
     return 0;
 }
