@@ -14,11 +14,11 @@ struct studentType {
 };
 
 // Prototip fungsi
-void readStudentData(studentType students[], int size); 
-void assignGrades(studentType students[], int size); 
-int findHighestScore(studentType students[], int size); 
-void printAllStudents(studentType students[], int size); 
-void printHighestScorers(studentType students[], int size, int highestScore); 
+void readData(studentType students[], int size); 
+void assignGrade(studentType students[], int size); 
+int findHighest(studentType students[], int size); 
+void printAll(studentType students[], int size); 
+void printHighest(studentType students[], int size, int highestScore); 
 
 int main() {
 
@@ -26,17 +26,17 @@ int main() {
     studentType students[20];  
 
     // Call fungsi
-    readStudentData(students, 20);
-    assignGrades(students, 20);
-    printAllStudents(students, 20);
-    int highestScore = findHighestScore(students, 20);
-    printHighestScorers(students, 20, highestScore);
+    readData(students, 20);
+    assignGrade(students, 20);
+    int highestScore = findHighest(students, 20);
+    printAll(students, 20);
+    printHighest(students, 20, highestScore);
 
     return 0;
 }
 
 // Fungsi untuk menginput data siswa
-void readStudentData(studentType students[], int size) {
+void readData(studentType students[], int size) {
     for (int i = 0; i < size; i++) {
         cout << "Enter first name, last name, and test score for student " << i + 1 << ": ";
         cin >> students[i].studentFName >> students[i].studentLName >> students[i].testScore;
@@ -45,7 +45,7 @@ void readStudentData(studentType students[], int size) {
 }
 
 // Fungsi untuk memberikan nilai huruf berdasarkan nilai angka
-void assignGrades(studentType students[], int size) {
+void assignGrade(studentType students[], int size) {
     for (int i = 0; i < size; i++) {
         if (students[i].testScore >= 90) {students[i].grade = 'A';} // 90-100 dapat A
         else if (students[i].testScore >= 80) {students[i].grade = 'B';} // 80-89 dapat B
@@ -56,21 +56,8 @@ void assignGrades(studentType students[], int size) {
     }
 }
 
-// Fungsi untuk menampilkan data siswa dan nilai dalam bentuk tabel
-void printAllStudents(studentType students[], int size) {
-    cout << "\nAll Students' Scores:\n\n";
-    cout << left << setw(20) << "Name" << setw(10) << "Score" << "Grade\n";
-    cout << "------------------------------------\n";
-    for (int i = 0; i < size; i++) {
-        cout << left << setw(20) << (students[i].studentLName + ", " + students[i].studentFName)
-             << setw(10) << students[i].testScore 
-             << students[i].grade << '\n';
-        // "setw" akan mengatur panjang spasi dari awal kata sehingga kata selanjutnya akan justified
-    }
-}
-
 // Fungsi untuk menemukan skor terbesar dari semua siswa (bubble sort)
-int findHighestScore(studentType students[], int size) {
+int findHighest(studentType students[], int size) {
     int highest = students[0].testScore;
     for (int i = 1; i < size; i++) {
         if (students[i].testScore > highest) {
@@ -83,8 +70,21 @@ int findHighestScore(studentType students[], int size) {
     // Di akhir, akan ditemukan nilai tertinggi dari semua siswa
 }
 
+// Fungsi untuk menampilkan data siswa dan nilai dalam bentuk tabel
+void printAll(studentType students[], int size) {
+    cout << "\nAll Students' Scores:\n\n";
+    cout << left << setw(20) << "Name" << setw(10) << "Score" << "Grade\n";
+    cout << "------------------------------------\n";
+    for (int i = 0; i < size; i++) {
+        cout << left << setw(20) << (students[i].studentLName + ", " + students[i].studentFName)
+             << setw(10) << students[i].testScore 
+             << students[i].grade << '\n';
+        // "setw" akan mengatur panjang spasi dari awal kata sehingga kata selanjutnya akan justified
+    }
+}
+
 // Fungsi untuk menampilkan siswa dengan nilai tertinggi dan nilainya sendiri
-void printHighestScorers(studentType students[], int size, int highestScore) {
+void printHighest(studentType students[], int size, int highestScore) {
     cout << "\nStudents with the highest score:\n";
     for (int i = 0; i < size; i++) {
         if (students[i].testScore == highestScore) {
