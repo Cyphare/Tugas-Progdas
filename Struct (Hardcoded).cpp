@@ -82,6 +82,7 @@ void assignGrades(studentType students[], int size) {
         else if (students[i].testScore >= 80) students[i].grade = 'B';
         else if (students[i].testScore >= 70) students[i].grade = 'C';
         else if (students[i].testScore >= 60) students[i].grade = 'D';
+        else if (students[i].testScore >= 50) students[i].grade = 'E';
         else students[i].grade = 'F';
     }
 }
